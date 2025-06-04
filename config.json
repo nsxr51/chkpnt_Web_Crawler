@@ -1,0 +1,28 @@
+{
+  "crawler": {
+    "maxDepth": 2,
+    "delay": 1000,
+    "maxPagesPerDomain": 50,
+    "requestTimeout": 10000,
+    "userAgent": "WebCrawler/1.0 (+educational-purpose)",
+    "respectRobotsTxt": true,
+    "maxLinksPerPage": 5
+  },
+  "analysis": {
+    "minWordLength": 3,
+    "topWordsLimit": 200,
+    "excludeCommonWords": true,
+    "generateVisualizations": true
+  },
+  "storage": {
+    "dataDirectory": "./data",
+    "reportsDirectory": "./reports",
+    "saveRawData": true,
+    "saveCsv": true
+  },
+  "performance": {
+    "enableMetrics": true,
+    "logLevel": "info",
+    "maxMemoryUsage": "512MB"
+  }
+}

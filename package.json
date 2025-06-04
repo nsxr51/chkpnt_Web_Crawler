@@ -1,0 +1,41 @@
+{
+  "name": "web-crawler",
+  "version": "1.0.0",
+  "description": "A web crawler that retrieves content, counts words, and analyzes data",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "start:fast": "node src/app.js --concurrent",
+    "start:turbo": "node src/app.js --concurrent --concurrency=10",
+    "dev": "nodemon src/app.js",
+    "test": "jest",
+    "analyze": "node src/analyzer.js",
+    "setup": "node scripts/setup.js",
+    "cleanup": "node scripts/cleanup.js",
+    "benchmark": "node scripts/benchmark.js",
+    "open-report": "node scripts/open-report.js",
+    "git-setup": "node scripts/git-setup.js",
+    "fix-git-push": "node scripts/fix-git-push.js",
+    "mcp:install": "cd mcp-server && npm install",
+    "mcp:setup": "cd mcp-server && node setup.js",
+    "mcp:start": "cd mcp-server && npm start",
+    "mcp:full-setup": "npm run mcp:install && npm run mcp:setup",
+    "install-deps": "npm install",
+    "full-setup": "npm run setup && npm run install-deps && npm run mcp:full-setup && npm run git-setup"
+  },
+  "keywords": ["web-crawler", "scraping", "word-frequency", "data-analysis"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.1.1",
+    "url": "^0.11.3",
+    "robots-parser": "^3.0.1",
+    "csv-writer": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "web-crawler-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for web crawler functionality",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "setup": "node setup.js",
+    "test": "node test.js",
+    "copy-config": "node copy-config.js"
+  },
+  "keywords": ["mcp", "web-crawler", "server"],
+  "author": "Web Crawler Team",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.1.1",
+    "robots-parser": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
